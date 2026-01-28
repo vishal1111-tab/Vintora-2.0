@@ -1,0 +1,460 @@
+@import "tailwindcss";
+:root {
+  --color-light: white;
+  --color-dark: #212121;
+  --color-signal: #06003d;
+  --default-color: #0c0c0cbd;
+
+  --color-background: var(--color-light);
+  --color-text: var(--color-dark);
+  --color-accent: var(--color-signal);
+
+  --size-bezel: .5rem;
+  --size-radius: 0;
+
+  line-height: 1.4;
+  font-size: calc(.6rem + .4vw);
+  color: var(--color-text);
+  background: var(--color-background);
+  font-weight: 300;
+}
+
+.arrow{
+  border: solid black;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 2px;
+}
+
+.down {
+  transform: rotate(45deg);
+}
+
+
+.login{
+    background-repeat: no-repeat;
+    background-size: cover;
+  background-image: -webkit-linear-gradient(30deg, transparent 50%, #fff 50%), url('https://img.freepik.com/free-vector/hand-drawn-fashion-shop-pattern-background_23-2150849915.jpg?t=st=1739542642~exp=1739546242~hmac=ba82c517e38a5baa983c0f1013f450302c088ab97caead33cb8c584c6ec88cf3&w=2000');
+}
+
+.Register{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: -webkit-linear-gradient(30deg, transparent 50%, #fff 50%), url('https://img.freepik.com/free-vector/hand-drawn-fashion-shop-pattern-background_23-2150849915.jpg?t=st=1739542642~exp=1739546242~hmac=ba82c517e38a5baa983c0f1013f450302c088ab97caead33cb8c584c6ec88cf3&w=2000');
+}
+
+.input {
+  position: relative;
+  width: 100%;
+}
+
+.input__field {
+    font-size: 14px;
+    font-weight: 500;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid currentColor;
+  padding: calc(var(--size-bezel) * 1) 0;
+  color: currentColor;
+  background: transparent;
+  border-radius: var(--size-radius);
+  outline: none;
+}
+
+.input__label {
+  position: absolute;
+  color: var(--default-color);
+  font-size: 16px;
+  left: 0;
+  top: 0;
+  padding: calc(var(--size-bezel) * 0.5) 0;
+  margin: calc(var(--size-bezel) * 0.5 + 3px) 0;
+  background: var(--color-background);
+  white-space: nowrap;
+  transform: translate(0, 0);
+  transform-origin: 0 0;
+  transition: transform 120ms ease-in, color 120ms ease-in;
+    font-weight: 400;
+  line-height: 1;
+}
+
+.input__field:focus,
+.input__field:not(:placeholder-shown) {
+  & + .input__label {
+    transform: translate(0rem, -65%) scale(0.8);
+    font-weight: bold;
+    color: var(--color-accent);
+  }
+}
+
+.password-toggle {
+    position: absolute;
+    font-weight: 500;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: var(--color-accent);
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 120ms ease-in;
+  
+    &:hover {
+      color: var(--color-dark);
+    }
+  }
+  
+  .password-toggle:focus {
+    outline: none;
+  }
+
+.register-now {
+  white-space: nowrap;
+  padding: 0 16px;
+  text-decoration: none;
+  border-radius: 14px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.register-now > i {
+  color: #2dd4bf;
+  font-size: 1.5rem;
+  transition: all 0.2s;
+}
+
+.register-now:hover > span {
+  scale: 1.1;
+  color: #f1f1f1;
+  mix-blend-mode: difference;
+}
+
+.register-now:before {
+  background: var(--color);
+  content: "";
+  position: absolute;
+  width: 130%;
+  height: 130%;
+  left: -110%;
+  top: 80%;
+  transform: rotate(45deg);
+}
+
+.register-now:hover:before {
+  animation: slide 1s forwards;
+}
+
+.register-text{
+    margin: 4px 8px;
+    color: black;
+}
+
+@keyframes slide {
+  50% {
+    left: 10%;
+    top: -80%;
+  }
+
+  100% {
+    left: -15%;
+    top: -15%;
+    scale: 3;
+  }
+}
+
+.register-now:has(.register-text){
+    --color: #000000
+}
+
+
+@media screen and (max-width: 768px) {
+    .Register{
+        background-position: 50%;
+        background-image: -webkit-linear-gradient(90deg, transparent 20%, #fff 35%), url('https://static.vecteezy.com/system/resources/previews/013/662/665/non_2x/clothing-background-dresses-and-costumes-and-accessories-vector.jpg');
+    }
+    .login{
+      background-position: 50%;
+      background-image: -webkit-linear-gradient(90deg, transparent 40%, #fff 50%), url('https://static.vecteezy.com/system/resources/previews/013/662/665/non_2x/clothing-background-dresses-and-costumes-and-accessories-vector.jpg');
+  }
+}
+
+
+
+:root {
+  --color-light: white;
+  --color-dark: #212121;
+  --color-signal: #06003d;
+  --default-color: #0c0c0cbd;
+
+  --color-background: var(--color-light);
+  --color-text: var(--color-dark);
+  --color-accent: var(--color-signal);
+
+  --size-bezel: .5rem;
+  --size-radius: 0;
+
+  line-height: 1.4;
+  font-size: calc(.6rem + .4vw);
+  color: var(--color-text);
+  background: var(--color-background);
+  font-weight: 300;
+}
+
+.arrow{
+  border: solid black;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 2px;
+}
+
+.down {
+  transform: rotate(45deg);
+}
+
+
+.login{
+    background-repeat: no-repeat;
+    background-size: cover;
+  background-image: -webkit-linear-gradient(30deg, transparent 50%, #fff 50%), url('https://img.freepik.com/free-vector/hand-drawn-fashion-shop-pattern-background_23-2150849915.jpg?t=st=1739542642~exp=1739546242~hmac=ba82c517e38a5baa983c0f1013f450302c088ab97caead33cb8c584c6ec88cf3&w=2000');
+}
+
+.Register{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: -webkit-linear-gradient(30deg, transparent 50%, #fff 50%), url('https://img.freepik.com/free-vector/hand-drawn-fashion-shop-pattern-background_23-2150849915.jpg?t=st=1739542642~exp=1739546242~hmac=ba82c517e38a5baa983c0f1013f450302c088ab97caead33cb8c584c6ec88cf3&w=2000');
+}
+
+.input {
+  position: relative;
+  width: 100%;
+}
+
+.input__field {
+    font-size: 14px;
+    font-weight: 500;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid currentColor;
+  padding: calc(var(--size-bezel) * 1) 0;
+  color: currentColor;
+  background: transparent;
+  border-radius: var(--size-radius);
+  outline: none;
+}
+
+.input__label {
+  position: absolute;
+  color: var(--default-color);
+  font-size: 16px;
+  left: 0;
+  top: 0;
+  padding: calc(var(--size-bezel) * 0.5) 0;
+  margin: calc(var(--size-bezel) * 0.5 + 3px) 0;
+  background: var(--color-background);
+  white-space: nowrap;
+  transform: translate(0, 0);
+  transform-origin: 0 0;
+  transition: transform 120ms ease-in, color 120ms ease-in;
+    font-weight: 400;
+  line-height: 1;
+}
+
+.input__field:focus,
+.input__field:not(:placeholder-shown) {
+  & + .input__label {
+    transform: translate(0rem, -65%) scale(0.8);
+    font-weight: bold;
+    color: var(--color-accent);
+  }
+}
+
+.password-toggle {
+    position: absolute;
+    font-weight: 500;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: var(--color-accent);
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 120ms ease-in;
+  
+    &:hover {
+      color: var(--color-dark);
+    }
+  }
+  
+  .password-toggle:focus {
+    outline: none;
+  }
+
+.register-now {
+  white-space: nowrap;
+  padding: 0 16px;
+  text-decoration: none;
+  border-radius: 14px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.register-now > i {
+  color: #2dd4bf;
+  font-size: 1.5rem;
+  transition: all 0.2s;
+}
+
+.register-now:hover > span {
+  scale: 1.1;
+  color: #f1f1f1;
+  mix-blend-mode: difference;
+}
+
+.register-now:before {
+  background: var(--color);
+  content: "";
+  position: absolute;
+  width: 130%;
+  height: 130%;
+  left: -110%;
+  top: 80%;
+  transform: rotate(45deg);
+}
+
+.register-now:hover:before {
+  animation: slide 1s forwards;
+}
+
+.register-text{
+    margin: 4px 8px;
+    color: black;
+}
+
+
+@keyframes slide {
+  50% {
+    left: 10%;
+    top: -80%;
+  }
+
+  100% {
+    left: -15%;
+    top: -15%;
+    scale: 3;
+  }
+}
+
+.register-now:has(.register-text){
+    --color: #000000
+}
+
+.image-banner-carousel{
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.mySwiper2 {
+  height: 80%;
+  width: 100%;
+}
+
+.mySwiper {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-wrapper{
+  align-items: center;
+}
+}
+
+.product-carousel{
+.swiper {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+.swiper-pagination-bullet-active{
+  background-color: black !important;
+  opacity: 1 !important;
+}
+.swiper-pagination-bullet{
+  background-color: #666666;
+  opacity: 0.1;
+}
+}
+
+
+@media screen and (max-width: 768px) {
+    .Register{
+        background-position: 50%;
+        background-image: -webkit-linear-gradient(90deg, transparent 20%, #fff 35%), url('https://static.vecteezy.com/system/resources/previews/013/662/665/non_2x/clothing-background-dresses-and-costumes-and-accessories-vector.jpg');
+    }
+    .login{
+      background-position: 50%;
+      background-image: -webkit-linear-gradient(90deg, transparent 40%, #fff 50%), url('https://static.vecteezy.com/system/resources/previews/013/662/665/non_2x/clothing-background-dresses-and-costumes-and-accessories-vector.jpg');
+  }
+
+  .image-banner-carousel{
+  .mySwiper{
+    padding: 0;
+  }
+  .mySwiper {
+    display: none;
+  }
+}
+}
