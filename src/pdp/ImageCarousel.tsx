@@ -2,6 +2,7 @@ import React, {useState, useRef, useEffect} from "react";
 import { useCart } from '../Store/CartContext';
 import { Navigate, useNavigate } from "react-router-dom";
 import ShareIconPopup from "./ShareIconPopup";
+import useMedia from "../Hook/UseMedia";
 
 interface ProductImage {
     src: string;
@@ -35,6 +36,7 @@ const ImageCarousel = ({ product, onBackToList }: ImageCarouselProps) => {
     const [touchEnd, setTouchEnd] = useState(0);
     const scrollContainerRef = useRef<HTMLDivElement>(null);
     const navigate = useNavigate();
+    const { isMobile } =  useMedia();
 
     // Default product data if no product is provided
     const defaultProduct: Product = {
@@ -318,7 +320,7 @@ const ImageCarousel = ({ product, onBackToList }: ImageCarouselProps) => {
                 </div>
 
                 {/* Main Image Display */}
-                <div className="relative">
+                {!isMobile &&<div className="relative">
                     <div className="flex justify-between items-center">
                         <div className="relative">
                             <img 
@@ -340,7 +342,7 @@ const ImageCarousel = ({ product, onBackToList }: ImageCarouselProps) => {
                             {shareicon && <ShareIconPopup />}
                         </div>
                     </div>
-                </div>   
+                </div>  } 
             </div>
 
             {/* Product Details Section */}
